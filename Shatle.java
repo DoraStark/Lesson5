@@ -21,33 +21,30 @@ public class Shatle {
         double luckyKoef=300;
         double luckyKoef2=800;
 
-        int aCounter=1;
-        int bCounter=1;
-
+        int counter=1;
 
                 for(int i=39;i<49; i++){
 
                     shatles[i]=luckyKoef;
                         luckyKoef+=5;
-                        aCounter++;
-                        if(aCounter==9){
+                        counter++;
+                        if(counter==9){
                             luckyKoef=350.0;
                         }
                     }
+
+                counter=1;
 
         for(int i=89;i<99; i++){
 
             shatles[i]=luckyKoef2;
             luckyKoef2+=5;
-            bCounter++;
-            if(bCounter==8){
+            counter++;
+            if(counter==9){
                 luckyKoef2=850.0;
             }
 
         }
-
-
-
                     System.out.println(Arrays.toString(shatles));
 
 
