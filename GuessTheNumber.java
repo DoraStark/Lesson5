@@ -23,7 +23,7 @@ public class GuessTheNumber {
             }
 
 
-            else if (tryNumber != key) {
+            else {
                 numberOfTries--;
                 if(numberOfTries>0){
                     System.out.println("Fail! Try one more time. Tries left: " + numberOfTries);}
@@ -33,10 +33,6 @@ public class GuessTheNumber {
                 }
 
             }
-
-
-
-
 
 
         }
