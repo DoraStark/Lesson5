@@ -6,7 +6,7 @@ public class Regbi {
 
         Random random = new Random();
 
-        int[] team1 = new int[250];
+        int[] team1 = new int[25];
         int[] team2 = new int[25];
         int minAge = 18;
         int maxAge = 40;
@@ -44,17 +44,5 @@ public class Regbi {
 
         System.out.println("Середній вік гравців другої команди: "+(average2));
 
-        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
+}
