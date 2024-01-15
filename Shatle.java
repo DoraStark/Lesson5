@@ -6,50 +6,42 @@ import java.util.Arrays;
         public static void main(String[] args) {
 
 
-            double[] shatles = new double[100];
 
-            for (int i = 0; i < shatles.length; i++) {
-                shatles[i] = i + 1;
-            }
+        int[] shatles = new int[100];
 
+        int index = 0;
+        int valueNum = 1;
 
-            for (int j = 3; j < shatles.length; j += 5) {
-
-                shatles[j] = j/(double)10;
-            }
-
-            double luckyKoef=300;
-            double luckyKoef2=800;
-
-            int counter=1;
-
-            for(int i=39;i<49; i++){
-
-                shatles[i]=luckyKoef;
-                luckyKoef+=5;
-                counter++;
-                if(counter==9){
-                    luckyKoef=350.0;
-                }
-            }
-
-            counter=1;
-
-            for(int i=89;i<99; i++){
-
-                shatles[i]=luckyKoef2;
-                luckyKoef2+=5;
-                counter++;
-                if(counter==9){
-                    luckyKoef2=850.0;
-                }
-
-            }
-            System.out.println(Arrays.toString(shatles));
+        int unluckyMin1 =38;
+        int unluckyMax1 =49;
+        int unluckyMin2=88;
+        int unluckyMax2=100;
+        int unluckyMin3=138;
+        int unluckyMax3=149;
 
 
+
+        for (int i = 1; i <shatles.length+1; i++) {
+            shatles[index] = valueNum;
+
+            if (valueNum%10==4 || valueNum%10 == 9) {
+                shatles[index] = ++valueNum;
         }
 
+            if (valueNum>=unluckyMin1 && valueNum<=unluckyMax1 ||
+                valueNum>=unluckyMin2 && valueNum<unluckyMax2 ||
+                valueNum>=unluckyMin3 && valueNum<=unluckyMax3) {
 
+            valueNum+=11;
+        }
+
+            valueNum++;
+            index+=1;
+        }
+
+        System.out.println(Arrays.toString(shatles));
+
+
+    }
 
     }
