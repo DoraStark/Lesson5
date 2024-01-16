@@ -5,43 +5,31 @@ import java.util.Arrays;
 
             public static void main(String[] args) {
 
-
-
                 int[] shatles = new int[100];
-
-                int index = 0;
                 int valueNum = 1;
-
-                int unluckyMin1 =38;
-                int unluckyMax1 =49;
-                int unluckyMin2=88;
-                int unluckyMax2=100;
-                int unluckyMin3=138;
-                int unluckyMax3=149;
+                int unluckyPart = 4;
+                int increaser = 5;
 
 
+                for (int i = 1; i <= shatles.length; i++) {
 
-                for (int i = 1; i <shatles.length+1; i++) {
-                    shatles[index] = valueNum;
-
-                    if (valueNum%10==4 || valueNum%10 == 9) {
-                        shatles[index] = ++valueNum;
+                    if (valueNum % 10 == 4 || valueNum % 10 == 9) {
+                        valueNum = ++valueNum;
                     }
 
-                    if (valueNum>=unluckyMin1 && valueNum<=unluckyMax1 ||
-                            valueNum>=unluckyMin2 && valueNum<unluckyMax2 ||
-                            valueNum>=unluckyMin3 && valueNum<=unluckyMax3) {
+                    if (valueNum / unluckyPart == 10) {
 
-                        valueNum+=10;
+                        valueNum += 10;
+                        unluckyPart += increaser;
+
                     }
-
+                    System.out.println(valueNum);
                     valueNum++;
-                    index+=1;
+
+
                 }
-
-                System.out.println(Arrays.toString(shatles));
-
-
             }
 
+
         }
+
